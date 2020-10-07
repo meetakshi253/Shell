@@ -1,6 +1,20 @@
 ----Description:----
 
-This code is an attempt at designing a simple shell that can handle five internal and five external commands viz. • ‘cd’, ‘pwd’, ‘echo’ , ‘history’ and ‘exit’ • ‘ls’, ‘cat’, ‘date’ , ‘rm’ and ‘mkdir’ Two command line options for each command have been implemented (except exit). There are certain assumptions that have been taken while implementing some commands and they will be listed down in their respective command’s sections. Some important information/pointers and assumptions- • The home directory for the shell is the actual home directory of your computer. • ‘~’ expands to your home folder. For example, /home/metset in my case. • Commands like rm and mkdir can take multiple file names as arguments however, the maximum number of files that the requisite command can take at a time is specified in the corresponding command section of this writeup. • Double quotes are treated as is in the Linux bash: everything inside double quotes is considered a single entity. For example “folder name” is a single token. • The size of the paths to a file cannot exceed more than 1024 characters. It would lead to a fault in the implementation. I have assumed that the size of the path would always be less than 1024 characters. • . (dot) represents the current directory and ..(dot dot) represents the parent directory. • Operators in combination with commands have not been implemented. For example, rm , cd -, cat >filename etc would just result in the treatment of “” and “-“, “>filename” as directory/file name only. • There is a separate history file that records history across all sessions. At the start of every session, the history list reads from the history file and writes to it at the end of every session. • User can only choose one option at a time. All invalid options will be considered as file/directory name or will be reported for error depending on the command. • Error handling is mostly done via perror().
+This code is an attempt at designing a simple shell that can handle five internal and five external commands viz. ‘cd’, ‘pwd’, ‘echo’ , ‘history’ and ‘exit’ ‘ls’, ‘cat’, ‘date’ , ‘rm’ and ‘mkdir’ 
+Two command line options for each command have been implemented (except exit). 
+There are certain assumptions that have been taken while implementing some commands and they will be listed down in their respective command’s sections. 
+
+Some important information/pointers and assumptions- 
+The home directory for the shell is the actual home directory of your computer. 
+‘~’ expands to your home folder. For example, /home/metset in my case.
+Commands like rm and mkdir can take multiple file names as arguments however, the maximum number of files that the requisite command can take at a time is specified in the corresponding command section of this writeup.
+Double quotes are treated as is in the Linux bash: everything inside double quotes is considered a single entity. For example “folder name” is a single token. 
+The size of the paths to a file cannot exceed more than 1024 characters. It would lead to a fault in the implementation. I have assumed that the size of the path would always be less than 1024 characters.
+. (dot) represents the current directory and ..(dot dot) represents the parent directory.
+Operators in combination with commands have not been implemented. For example, rm , cd -, cat >filename etc would just result in the treatment of “” and “-“, “>filename” as directory/file name only.
+There is a separate history file that records history across all sessions. At the start of every session, the history list reads from the history file and writes to it at the end of every session.
+User can only choose one option at a time. All invalid options will be considered as file/directory name or will be reported for error depending on the command.
+Error handling is mostly done via perror().
 
 ----Commands:----
 
