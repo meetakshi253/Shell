@@ -1,5 +1,4 @@
 //can implement cat -E, cat -n and default
-//open files, read them line by line, and unke aage numbers daldo, ya peeche $ daldo
 
 #include <stdio.h> 
 #include <stdlib.h> 
@@ -16,7 +15,7 @@ int main(int argc, char** argv)
     temp++; temp++;
     char line[2048];
     int line_count=1;
-    //check the read access of files yes. read permissions honi chahiye
+    //check the read access of files 
     while(*(temp)!=NULL)
     {
 
