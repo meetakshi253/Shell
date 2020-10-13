@@ -7,9 +7,8 @@
 #include <unistd.h>
 #include <string.h>
 
-//i can have two modes- f and d. Now basically, default can be f: f matlab it cant delete ant directories whatesoeever,   but d matlab yeas attempt to delete directories 
 
-int main(int argc, char** argv) //argv will haveem  args: rm path, mode, file names. number of args will be 1,2, n, null??
+int main(int argc, char** argv) 
 {
     int c, c1;
     
