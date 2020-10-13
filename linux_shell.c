@@ -690,22 +690,7 @@ char** parse_input(char *str, char** parsed_string)
     {
         perror("");
     }
-    //wordfree(&word);
     return parsed_string;
-    //exit(EXIT_SUCCESS);
-    /**for (int i=0;i<MAXARGS; i++)
-    {
-        parsed_string[i] = strsep(&str ," ");
-        if(parsed_string[i]==NULL)
-        {
-            break;
-        }
-        if(strlen(parsed_string[i])==0)
-        {
-            i--;
-        }
-    }
-  //  printf("ok");**/
 }
 
 int examine_input(char *str, char **final_parse) //str is input string
