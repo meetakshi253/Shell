@@ -39,7 +39,7 @@ int main(int argc, char** argv)   //path, mode, (access mode if -m), files
     else if (strcmp(argv[1], "-m")==0)
     {
         temp++;
-        char *permissions = argv[2]; //assume that it is an interger represemtable string 
+        char *permissions = argv[2]; 
         long permission = strtol(permissions, NULL, 8);
         temp++;
         while(*(temp)!=NULL)
